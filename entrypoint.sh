@@ -27,6 +27,9 @@ cd $BINDIR
 . ./activate
 chia init
 
+if [[ ! -z $COUNT ]]; then
+  plotargs="$plotargs -n $COUNT"
+fi
 if [[ ! -z $MEMSIZE ]]; then
   plotargs="$plotargs -b $MEMSIZE"
 fi
