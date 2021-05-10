@@ -21,5 +21,5 @@ Also have a look at [the Chia CLI plots documentation](https://github.com/Chia-N
 ## Example
 Running a plotter with the default options and a memsize of 6GB:
 ```
-docker run -it --name chiaplotter12 -e FARMERKEY=0815deadbeef42 -e POOLKEY=1337beef42069 -e MEMSIZE=6144 -v /cache/disk12/:/chia/temp -v /mnt/chia/plots/:/chia/plots chiaplotter
+docker run -d --restart=always --log-opt max-size=50M --name chiaplotter12 -e FARMERKEY=0815deadbeef42 -e POOLKEY=1337beef42069 -e MEMSIZE=6144 -v /cache/disk12/:/chia/temp -v /mnt/chia/plots/:/chia/plots chiaplotter
 ```
